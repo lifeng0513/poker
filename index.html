@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>poker</title>
+    <link rel='stylesheet' href='./stylesheets/index.css'>
+    <link rel="stylesheet" href="./css/font.css"/>
+    <script src='./javascripts/index.js'></script>
+    <script src="javascripts/jQuery.js"></script>
+
+    <style>
+        .banner{
+            /*width:100%;*/
+            height:800px;
+            position: relative;
+
+        }
+        .banner .box{
+            width:500%;
+            height:100%;
+            margin:0;
+
+        }
+        .bb{width:800px;height:800px;
+            position: absolute;top:0;left:285px;
+        }
+        .ban1{
+            width:100px;height:35px;text-align: center;line-height: 35px;
+            font-size:20px;border:1px solid #fff;background: rgba(0,0,0,0.4);
+            position: absolute;left:50%;top:50%;color:#fff;
+            font-weight: 500;
+        }
+        .list{
+            height:100%; width:20%;display:block;
+            text-decoration: none;color:#000;float:left;background-size: auto 200px;
+
+        }
+        .list:nth-child(1){
+            background-size: cover;
+            background:url("img/pb1.png") no-repeat center;
+        }
+        .list:nth-child(2){
+            background-size: cover;
+            background:url("img/pb2.png") no-repeat center;
+        }
+        .list:nth-child(3){
+            background-size: cover;
+            background:url("img/pb3.png") no-repeat center;
+        }
+        .list:nth-child(4){
+            background-size: cover;
+            background:url("img/pb4.png") no-repeat center;
+        }
+        .list:nth-child(5){
+            background-size: cover;
+            background:url("img/bp5.png") no-repeat center;
+        }
+        .btn{
+            width: 200px;
+            height: 40px;
+            position:absolute;
+            bottom:50px;
+            left:500px;
+            float:left;
+        }
+        .btn li{
+            width:20px;height:20px;border-radius:50%;float:left;margin:0 10px;
+            background: #888;padding:0;cursor: pointer;list-style: none;
+        }
+        .btn li:hover{
+            background:#343434;
+        }
+        .write{width:354px;height:217px;margin:260px 200px;}
+        .tishi{width:300px;height:300px;z-index: 99;
+               background:url("img/tishi.png");
+               position:absolute;top:110px;left:470px;
+               display: none;
+        }
+        .close{width:30px;height:30px;
+            float:right;font-size: 30px;color:#000;line-height: 30px
+        }
+        .jx{width:200px;height:90px;position:absolute;bottom:20px;left:50px;background: url("img/an3.png");z-index: 99}
+        .jx span{text-align: center;line-height: 90px;color:#fff;font-size: 20px;margin-left:73px;font-weight: 800;}
+         video{width:0;height:0}
+    </style>
+
+    <script>
+        $(function(){
+            var num=0;
+            var t=setInterval(move,6000);
+            function move(){
+                num++;
+                if(num==$(".box .list").length-1){
+                    $(".box").animate({marginLeft:-num*100+"%"},function(){
+                        $(".box").css({marginLeft:0});
+                    })
+                    num=0;
+                }else{
+                    $(".box").animate({marginLeft:-num*100+"%"})
+                }
+
+                $('.btn li').css({background:"#888",border:"none"});
+                $('.btn li').eq(num).css({background:"#fff",border:"1px solid #08c",width:"20px" ,height:"20px"});
+
+            }
+
+            $(".close").click(function(){
+                $(".tishi").css({
+                    display:"none",
+                    cursor: "pointer"
+                })
+
+            })
+
+            $(".tishi .jx").click(function(){
+                $(".tishi").css({"display":"none"});
+            })
+        })
+
+    </script>
+</head>
+<body>
+<video autoplay="" name="media" loop="loop"><source src="1.mp3" type="audio/mp3"></video>
+
+<div class="banner container-fluid ">
+    <div class="box">
+        <div class="bb">
+            <div class="maxpoker" id="poker">
+                <div class="lpoker" id="card"></div>
+                <div class="rpoker" id="rpoker"></div>
+                <div class="anniu yidong" id="next"><img src = "./img/n.png"></div>
+                <div class="anniu fanhui" id="reset"><img src="./img/reset.png"></div>
+            </div>
+
+        </div>
+        <a href="javascript:;" class="list"></a>
+        <a href="javascript:;" class="list"></a>
+        <a href="javascript:;" class="list"></a>
+        <a href="javascript:;" class="list"></a>
+        <a href="javascript:;" class="list"></a>
+    </div>
+
+
+</div>
+<div class="tishi">
+    <div class="close" data-role1="close"></div>
+    <div class="jx"><span>继续</span></div>
+</div>
+</body>
+</html>

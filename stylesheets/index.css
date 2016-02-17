@@ -1,0 +1,127 @@
+body{
+	margin:0;
+	font-family: "cooper";
+}
+* {
+    box-sizing: border-box;
+}
+body,h1,h2,h3,h4,h5,h6,ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.banner{
+    width:auto;
+    height:900px;
+    overflow: hidden;
+    position: relative;
+
+}
+.banner .box{
+    width:500%;
+    height:100%;
+    margin-top: 10px;
+    /*float:left;*/
+}
+.list{
+    height:100%;
+    width:20%;
+    display:block;
+    text-decoration: none;
+    color:#000;
+    float:left;
+    /*background:url("../images/small.png") no-repeat center;*/
+    background-size: auto 200px;
+}
+.list:nth-child(1){
+    background:url("../img/pb1.png") no-repeat ;
+}
+.list:nth-child(2){
+    background:url("../img/pb2.png") no-repeat ;
+}
+.list:nth-child(3){
+    background:url("../img/bp3.png") no-repeat ;
+}
+.list:nth-child(4){
+    background:url("../img/bp4.png") no-repeat ;
+}
+.list:nth-child(5){
+    background:url("../img/bp5.png") no-repeat ;
+}
+
+.maxpoker{
+    width:800px;
+    height:800px;
+    /*border: 1px solid black;*/
+    margin:0 auto;
+    position: relative;
+    z-index: 99;
+}
+
+
+.pk{
+     width:100px;
+     height: 150px;
+     color:#ffffff;
+     font-size:16px;
+     border: 1px solid #F1A5A5;
+     border-radius: 5px;
+     background: rgba(255,23,20,0.5);
+     box-shadow: 0 2px 1px black;
+}
+.pk11{
+     width:100px;
+     height: 150px;
+     color:#ffffff;
+     font-size:16px;
+     border-radius: 5px;
+     box-shadow: 0 2px 1px black;
+}
+.lpoker{
+     width:100px;
+     height: 150px;
+     position: absolute;
+     left:150px;
+     bottom:100px;
+     /*border: 1px solid #F1A5A5;*/
+     border-radius: 5px;
+     /*background: rgba(255,23,20,0.5);*/
+     /*box-shadow: 0 2px 1px black;*/
+}
+.rpoker{
+    width:100px;
+    height: 150px;
+    position:absolute;
+    right:150px;
+    bottom:100px;
+    /*border: 1px solid red;*/
+}
+.anniu{
+    width:70px;
+    height:35px;
+    /*border: 1px solid black;*/
+    /*background-image:url(./img/12.jpg);*/
+}
+.yidong{
+    position: absolute;
+    left:370px;
+    bottom:180px;
+}
+.fanhui{
+    position: absolute;
+    left:370px;
+    bottom:120px;
+}
+.five{
+    width:100px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    background: #DAD3D3;
+    border-radius: 5px;
+    box-shadow: 1px 1px solid #ccc;
+}
